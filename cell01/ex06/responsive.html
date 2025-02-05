@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .table-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: stretch;
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: left;
+            padding: 30px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .first-cell {
+            background-color: #96ff25; 
+            color: #333;
+        }
+
+        .second-cell {
+            background-color: red;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <tr>
+                <td class="first-cell">First cell</td>
+                <td class="second-cell">Second cell</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
