@@ -1,0 +1,46 @@
+body {
+	margin: 0; 
+	padding: 0;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    height: 100%;
+}
+.text1 {
+    display: flex;
+    height: 100vh;
+    padding: 100px 0;
+    color: white;
+    justify-content: center;
+	align-items: center;
+	background-position: center;
+    background-size: cover;
+    font-size: 50px;
+
+    background-image: url("https://static.vecteezy.com/system/resources/previews/006/247/478/non_2x/japanese-style-art-element-background-free-vector.jpg");
+
+}
+.textblackblock{
+    display: flex;
+    height: 100vh;
+    padding: 100px 0;
+    color: white;
+    justify-content: center;
+	align-items: center;
+	background-position: center;
+    background-size: cover;
+    font-size: 50px;
+    background-color: black;
+}
+.text2{
+    display: flex;
+    height: 100vh;
+    padding: 100px 0;
+    color: lightcoral;
+    justify-content: center;
+	align-items: center;
+	background-position: center;
+    background-size: cover;
+    font-size: 50px;
+
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-japanese-picture-background-material-image_269860.jpg");
+}
