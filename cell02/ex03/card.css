@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.card-container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card-container:hover {
+    transform: translateY(-10px);
+}
+
+.card-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+    border: 3px solid #B2A4D4;
+}
+
+.username {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.description {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-media-container a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.fa-facebook { background: #3b5998; }
+.fa-twitter { background: #1da1f2; }
+.fa-instagram { background: #e1306c; }
+
+.social-media-container a:hover {
+    opacity: 0.8;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact::before {
+    content: "Contact";
+    display: inline-block;
+    background-color: #B2A4D4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact:hover::before {
+    opacity: 0.8;
+}
