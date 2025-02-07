@@ -49,7 +49,9 @@ h1 {
     font-size: 14px;
     margin-bottom: 20px;
 }
-
+.locate{
+    font-weight: bold;
+}
 .social-media-container {
     display: flex;
     justify-content: center;
