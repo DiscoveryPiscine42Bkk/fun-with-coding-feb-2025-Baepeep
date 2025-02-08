@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explode this balloon</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: beige;
+        height: 100vh;
+    }
+    #balloon{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        cursor: pointer;
+        font-style: italic;
+        font-size: 25px;
+        transition: all 0.2s ease-in-out;
+    }
+</style>
+<body>
+    <div id="balloon">Click me</div>
+    <script>
+        $(document).ready(function() {
+            let size = 200;
+            let colors = ['red', 'green', 'blue'];
+            let colorIndex = 0;
+
+            $('#balloon').on('click', function() {
+                size += 10;
+                colorIndex = (colorIndex + 1) % colors.length;
+
+                $(this).css({
+                    'width': `${size}px`,
+                    'height': `${size}px`,
+                    'background-color': colors[colorIndex]
+                });
+
+                if (size > 420) {
+                    size = 200;
+                    colorIndex = 0;
+                    $(this).css({
+                        'width': `${size}px`,
+                        'height': `${size}px`,
+                        'background-color': colors[colorIndex]
+                    });
+                }
+            });
+
+            $('#balloon').on('mouseleave', function() {
+                if (size > 200) {
+                    size -= 5;
+                    colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+                    $(this).css({
+                        'width': `${size}px`,
+                        'height': `${size}px`,
+                        'background-color': colors[colorIndex]
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

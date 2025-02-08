@@ -1,0 +1,48 @@
+body {
+    font-family: 'Times New Roman';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: plum;
+}
+
+#ft_list {
+    width: 300px;
+    border: 1px solid pink;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: lightblue;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px black;
+}
+
+.todo-item {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: beige;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.todo-item:hover {
+    background-color: brown;
+}
+
+#new-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: palevioletred;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#new-btn:hover {
+    background-color: lightgreen;
+}

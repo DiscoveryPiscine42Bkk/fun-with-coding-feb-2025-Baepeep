@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator (jQuery)</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            font-family: 'Times New Roman';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: plum;
+        }
+    </style>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <input type="number" id="leftOperand" placeholder="Left Operand" min="0">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="number" id="rightOperand" placeholder="Right Operand" min="0">
+        <button id="calculateButton">Try me!</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Function to perform calculation
+            function calculate() {
+                const leftValue = parseInt($('#leftOperand').val());
+                const rightValue = parseInt($('#rightOperand').val());
+                const selectedOperator = $('#operator').val();
+
+                if (isNaN(leftValue) || isNaN(rightValue) || leftValue < 0 || rightValue < 0) {
+                    alert('Error :(');
+                    return;
+                }
+
+                let result;
+                try {
+                    switch (selectedOperator) {
+                        case '+':
+                            result = leftValue + rightValue;
+                            break;
+                        case '-':
+                            result = leftValue - rightValue;
+                            break;
+                        case '*':
+                            result = leftValue * rightValue;
+                            break;
+                        case '/':
+                            if (rightValue === 0) throw 'It\'s over 9000!';
+                            result = leftValue / rightValue;
+                            break;
+                        case '%':
+                            if (rightValue === 0) throw 'It\'s over 9000!';
+                            result = leftValue % rightValue;
+                            break;
+                        default:
+                            alert('Error :(');
+                            return;
+                    }
+                    alert(result);
+                    console.log(result);
+                } catch (error) {
+                    alert(error);
+                    console.log(error);
+                }
+            }
+
+            // Event listener for the button
+            $('#calculateButton').on('click', calculate);
+
+            // Periodic alert every 30 seconds
+            setInterval(() => {
+                alert('Please, use me...');
+            }, 30000);
+        });
+    </script>
+</body>
+</html>
